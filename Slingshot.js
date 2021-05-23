@@ -7,6 +7,9 @@ class SlingShot{
             length: 10
         }
         this.pointB = pointB
+        this.sling1 = loadImage("sprites/sling1.png");
+        this.sling2 = loadImage("sprites/sling2.png");
+        this.sling3 = loadImage("sprites/sling3.png");
         this.sling = Constraint.create(options);
         World.add(world, this.sling);
     }
@@ -17,6 +20,9 @@ class SlingShot{
 
     display(){
         if(this.sling.bodyA){
+            image(this.sling1,200,20);
+            image(this.sling2,170,20);
+
             var pointA = this.sling.bodyA.position;
             var pointB = this.pointB;
             strokeWeight(4);
